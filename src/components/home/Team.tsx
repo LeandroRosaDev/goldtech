@@ -22,8 +22,9 @@ export function Team({ section }: { section: HomeSection }) {
               src={data.imagemColetiva}
               alt="Equipe Goldtech"
               label="Equipe em campo"
-              dimensao="1600 × 720 px"
-              className="h-[200px] min-[1200px]:h-[360px]"
+              dimensao="1774 × 887 px"
+              imageClassName="object-center"
+              className="aspect-[2/1] w-full"
             />
             {data.legendaColetiva ? <Caption>{data.legendaColetiva}</Caption> : null}
           </figure>

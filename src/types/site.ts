@@ -11,6 +11,7 @@ export type SectionId =
   | "diferenciais"
   | "tecnologia"
   | "modernizacao"
+  | "universo"
   | "clientes"
   | "projetos"
   | "equipe"
@@ -241,6 +242,18 @@ export type TecnologiaConteudo = {
 
 export type ExperienciaConteudo = {
   palavras: string[]
+  imagens: string[]
+}
+
+export type UniversoItem = {
+  codigo: string
+  titulo: string
+  texto: string
+  fato: string
+}
+
+export type UniversoConteudo = {
+  itens: UniversoItem[]
 }
 
 export type CtaConteudo = {

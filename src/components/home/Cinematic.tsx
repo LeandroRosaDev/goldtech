@@ -12,7 +12,9 @@ export function Cinematic({ section }: { section: HomeSection }) {
   const imageRef = useRef<HTMLDivElement>(null)
   const [index, setIndex] = useState(0)
   const [reduce, setReduce] = useState(false)
-  const hasImage = Boolean(section.imagem) && !section.video
+  const tiles = data.imagens
+  const hasImage = tiles.length > 0 && !section.video
+  const fallback = tiles[2] ?? tiles[0]
 
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)")
@@ -75,35 +77,44 @@ export function Cinematic({ section }: { section: HomeSection }) {
         {hasImage ? (
           <>
             <Image
-              src={section.imagem!}
+              src={fallback}
               alt=""
               fill
               quality={90}
               sizes="640px"
               className="pointer-events-none hidden scale-110 object-cover blur-2xl brightness-[0.4] min-[1921px]:block"
             />
-            <div
-              ref={imageRef}
-              className={
-                reduce
-                  ? "absolute inset-0"
-                  : "absolute top-0 left-1/2 aspect-[2/3] w-auto shadow-[0_0_120px_rgba(0,0,0,0.7)]"
-              }
-              style={
-                reduce
-                  ? undefined
-                  : { height: "max(160svh, min(150vw, 2880px))", transform: "translate3d(-50%, 0, 0)" }
-              }
-            >
+            {reduce ? (
               <Image
-                src={section.imagem!}
+                src={fallback}
                 alt="Poço do elevador, da casa de máquinas à cabine"
                 fill
                 quality={90}
-                sizes="(max-width: 767px) 240vw, (max-width: 1920px) 100vw, 1920px"
+                sizes="100vw"
                 className="object-cover"
               />
-            </div>
+            ) : (
+              <div
+                ref={imageRef}
+                className="absolute top-0 left-1/2 aspect-[2/3] w-auto shadow-[0_0_120px_rgba(0,0,0,0.7)]"
+                style={{ height: "max(160svh, min(150vw, 2880px))", transform: "translate3d(-50%, 0, 0)" }}
+              >
+                <div className="flex w-full flex-col">
+                  {tiles.map((src, tile) => (
+                    <Image
+                      key={src}
+                      src={src}
+                      alt={tile === 0 ? "Poço do elevador, da casa de máquinas à cabine" : ""}
+                      width={2172}
+                      height={652}
+                      quality={90}
+                      sizes="(max-width: 767px) 240vw, (max-width: 1920px) 100vw, 1920px"
+                      className="block h-auto w-full [&:not(:first-child)]:-mt-px"
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
           </>
         ) : (
           <MediaPanel

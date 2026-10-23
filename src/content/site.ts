@@ -18,6 +18,7 @@ import type {
   SiteConfig,
   TecnologiaConteudo,
   Unidade,
+  UniversoConteudo,
   CtaConteudo,
   ContatoConteudo,
 } from "@/types/site"
@@ -105,7 +106,7 @@ export const banners: Banner[] = [
 export const indicadores: Indicador[] = [
   { id: "elevadores", valor: 250, prefixo: "+", rotulo: "Elevadores atendidos" },
   { id: "clientes", valor: 80, prefixo: "+", rotulo: "Clientes" },
-  { id: "experiencia", valor: 15, sufixo: " anos", rotulo: "Experiência" },
+  { id: "experiencia", valor: 25, prefixo: "+", sufixo: " anos", rotulo: "Experiência" },
   { id: "atendimento", valor: 24, sufixo: "h", rotulo: "Atendimento" },
 ]
 
@@ -113,11 +114,11 @@ export const institucional: Institucional = {
   rotulo: "Goldtech",
   titulo: "Engenharia que mantém tudo em movimento.",
   corpo:
-    "A Goldtech transforma a mobilidade vertical em condomínios, empresas e residências em todo o Estado do Rio de Janeiro. Oferecemos serviços especializados em instalação, manutenção preventiva e corretiva, modernização e acessibilidade, unindo alta performance técnica a um atendimento humanizado e transparente. Nosso compromisso é garantir a segurança, disponibilidade e tranquilidade dos seus equipamentos, focando na solução da causa-raiz e sem burocracia.",
+    "A Goldtech tem mais de 25 anos de atuação em condomínios, empresas e residências em todo o Estado do Rio de Janeiro. Com a mudança do quadro societário, os novos donos Felipe e Fábio reformularam completamente a empresa, tornando-a mais eficiente e confiável. A operação segue em instalação, manutenção preventiva e corretiva, modernização e acessibilidade, com atendimento direto e foco na causa de cada problema.",
   historia: [
-    "A operação nasceu do trabalho de campo: técnicos que conhecem poço, máquina, comando e a rotina de quem administra o prédio.",
-    "Com o tempo, manutenção, modernização e instalação passaram a andar no mesmo acompanhamento, com registro do que foi feito em cada equipamento.",
-    "Hoje a equipe une procedimento, histórico técnico e presença nas unidades atendidas.",
+    "A Goldtech nasceu do trabalho de campo, há mais de 25 anos: técnicos que conhecem poço, máquina, comando e a rotina de quem administra o prédio.",
+    "A mudança do quadro societário colocou Felipe Pimental e Fábio Silveira à frente da empresa. A reformulação alcançou processo, registro e atendimento.",
+    "Hoje a equipe une procedimento, histórico técnico e presença nas unidades atendidas, com uma operação mais eficiente e confiável.",
   ],
   linkTexto: "Conheça nossa história",
   link: "/sobre",
@@ -287,6 +288,53 @@ export const experiencia: ExperienciaConteudo = {
     "Engenharia",
     "Confiança",
   ],
+  imagens: [
+    "/imagens/goldtech_parallax_secao_01.webp",
+    "/imagens/goldtech_parallax_secao_02.webp",
+    "/imagens/goldtech_parallax_secao_03.webp",
+    "/imagens/goldtech_parallax_secao_04.webp",
+    "/imagens/goldtech_parallax_secao_05.webp",
+  ],
+}
+
+export const universo: UniversoConteudo = {
+  itens: [
+    {
+      codigo: "CM",
+      titulo: "Casa de máquinas",
+      texto:
+        "O motor, o freio e a máquina de tração ficam acima do poço. É dali que a viagem começa, e é dali que boa parte do diagnóstico sai.",
+      fato: "A casa de máquinas concentra o que a cabine só revela como sintoma.",
+    },
+    {
+      codigo: "QC",
+      titulo: "Quadro de comando",
+      texto:
+        "O comando decide partida, parada e nivelamento. Quando ele envelhece, o mesmo defeito volta depois do reparo.",
+      fato: "Comando antigo não se resolve só com troca de peça.",
+    },
+    {
+      codigo: "CB",
+      titulo: "Cabine",
+      texto:
+        "Nivelamento, botoeira, luz e o que o passageiro sente na viagem. É o trecho visível da manutenção.",
+      fato: "O passageiro sente na cabine o que nasceu na máquina.",
+    },
+    {
+      codigo: "PT",
+      titulo: "Portas",
+      texto:
+        "Fechamento, reabertura e o tempo de espera. A maioria das ocorrências do dia a dia começa aqui.",
+      fato: "A maioria das ocorrências começa nas portas.",
+    },
+    {
+      codigo: "PÇ",
+      titulo: "Poço e cabos",
+      texto:
+        "Cabos, polias e o que fica fora do lobby. Só a equipe técnica entra nesse trecho.",
+      fato: "Poço e cabos ficam com quem tem a atribuição técnica.",
+    },
+  ],
 }
 
 export const modernizacao: ModernizacaoConteudo = {
@@ -318,15 +366,16 @@ export const clientes: Cliente[] = [
 
 export const projetos: Projeto[] = [
   {
-    slug: "residencial-atlantico",
-    nome: "Residencial Atlântico",
-    equipamentos: "12 equipamentos",
+    slug: "tce-rj",
+    nome: "Tribunal de Contas do Estado do Rio de Janeiro (TCE-RJ)",
+    equipamentos: "8 equipamentos",
     servico: "Manutenção preventiva e corretiva",
     cidade: "Rio de Janeiro",
+    imagem: "/imagens/tce.webp",
     resumo:
-      "Contrato de manutenção para doze elevadores de um residencial na orla, com rotina preventiva e corretiva.",
+      "Contrato de manutenção para oito elevadores de um órgão público de grande circulação, com rotina preventiva e corretiva.",
     problema:
-      "Doze elevadores na orla com rotina irregular e paradas que se repetiam sem histórico claro.",
+      "Oito elevadores em uso intenso, com rotina irregular e paradas que se repetiam sem histórico claro.",
     diagnostico:
       "A manutenção anterior não deixava registro consistente de componentes e chamados.",
     solucao:
@@ -335,20 +384,21 @@ export const projetos: Projeto[] = [
       "A administração passou a acompanhar o que foi feito em cada equipamento, em vez de depender da memória da última visita.",
     depoimento: {
       texto: "Passamos a saber o que acontece em cada elevador, e não só quando alguém liga.",
-      autor: "Administração do Residencial Atlântico",
+      autor: "Administração do TCE-RJ",
       cargo: "Rio de Janeiro",
     },
   },
   {
-    slug: "edificio-horizonte",
-    nome: "Edifício Horizonte",
-    equipamentos: "8 equipamentos",
+    slug: "condominio-edificio-flamboyant",
+    nome: "Condomínio do Edifício Flamboyant",
+    equipamentos: "2 equipamentos",
     servico: "Modernização de comando e cabine",
-    cidade: "São Paulo",
+    cidade: "Rio de Janeiro",
+    imagem: "/imagens/flamboyam.webp",
     resumo:
-      "Modernização de comando e cabine em um edifício comercial, com o equipamento existente mantido em operação.",
+      "Modernização de comando e cabine em um edifício residencial, com o equipamento existente mantido em operação.",
     problema:
-      "Comando e cabine antigos num edifício comercial, com viagens irregulares no horário de pico.",
+      "Dois elevadores antigos, com paradas que voltavam e viagens irregulares no horário de pico.",
     diagnostico:
       "O equipamento ainda tinha estrutura útil, mas o comando não acompanhava o uso atual.",
     solucao:
@@ -357,41 +407,41 @@ export const projetos: Projeto[] = [
       "Partidas mais estáveis e uma cabine alinhada ao uso do prédio, sem troca integral.",
     depoimento: {
       texto: "O prédio ganhou desempenho sem parar a operação por uma substituição completa.",
-      autor: "Gestão do Edifício Horizonte",
-      cargo: "São Paulo",
+      autor: "Síndico do Edifício Flamboyant",
+      cargo: "Rio de Janeiro",
     },
   },
   {
-    slug: "condominio-serra-verde",
-    nome: "Condomínio Serra Verde",
-    equipamentos: "4 equipamentos",
-    servico: "Instalação e manutenção",
-    cidade: "Belo Horizonte",
+    slug: "condominio-residencial-ibiza",
+    nome: "Condomínio do Edifício Residencial Ibiza",
+    equipamentos: "3 equipamentos",
+    servico: "Manutenção preventiva",
+    cidade: "Rio de Janeiro",
+    imagem: "/imagens/ibiza.webp",
     resumo:
-      "Instalação de quatro elevadores e o início do contrato de manutenção do condomínio.",
+      "Contrato de manutenção preventiva para três elevadores, com histórico técnico desde a primeira visita.",
     problema:
-      "Condomínio novo, com quatro elevadores para instalar e uma operação ainda sem rotina de manutenção.",
+      "Três elevadores em uso diário, sem registro do que já tinha sido feito em cada equipamento.",
     diagnostico:
-      "A entrega da obra precisava chegar ao comissionamento e já nascer com acompanhamento.",
+      "A administração dependia da memória da última visita para decidir o próximo passo.",
     solucao:
-      "Instalação dos quatro equipamentos e abertura do contrato de manutenção no mesmo fluxo.",
+      "Contrato de manutenção preventiva, com roteiro de visita e registro de cada intervenção.",
     resultado:
-      "O condomínio entrou em uso com os elevadores entregues e a rotina técnica já definida.",
+      "O condomínio passou a acompanhar o histórico de cada elevador, em vez de recomeçar a cada chamado.",
     depoimento: {
-      texto: "Saímos da obra com instalação e manutenção no mesmo acompanhamento.",
-      autor: "Síndico do Condomínio Serra Verde",
-      cargo: "Belo Horizonte",
+      texto: "Saímos da primeira visita com o que foi visto e o que ficou pendente.",
+      autor: "Síndico do Edifício Residencial Ibiza",
+      cargo: "Rio de Janeiro",
     },
   },
 ]
 
 export const equipe: EquipeConteudo = {
-  imagemColetiva: "/imagens/foto-equipe.webp",
-  legendaColetiva: "Imagem temporária",
+  imagemColetiva: "/imagens/equipe.webp",
   pessoas: [
-    { nome: "João da Silva", cargo: "Diretor Técnico", imagem: "/imagens/equipe-1.webp", legenda: "Imagem temporária" },
-    { nome: "Carlos Santos", cargo: "Supervisor de Operações", imagem: "/imagens/equipe-1.webp", legenda: "Imagem temporária" },
-    { nome: "Marcos Oliveira", cargo: "Técnico", imagem: "/imagens/equipe-1.webp", legenda: "Imagem temporária" },
+    { nome: "Felipe Pimental", cargo: "Sócio e Dono", imagem: "/imagens/felipe.webp" },
+    { nome: "Fábio Silveira", cargo: "Sócio e Dono", imagem: "/imagens/fabio.webp" },
+    { nome: "Milena Filgueira", cargo: "Supervisora Administrativa", imagem: "/imagens/milena.webp" },
   ],
 }
 
@@ -417,6 +467,7 @@ export const posts: Post[] = [
       "O fechamento da visita é o registro. O que foi inspecionado, o que foi ajustado e o que pede troca numa próxima etapa. Sem esse histórico, a próxima falha começa do zero.",
       "Uma preventiva bem feita não promete que o elevador nunca para. Ela reduz surpresa e deixa a administração com informação para decidir, em vez de depender da memória da última visita.",
     ],
+    imagem: "/imagens/diagnostico.webp",
     destaque: true,
   },
   {
@@ -432,6 +483,7 @@ export const posts: Post[] = [
       "O quarto é porta que fecha com hesitação ou reabre sem motivo claro. O quinto é peça de reposição cada vez mais difícil, sinal de que o conjunto saiu de linha. O sexto é cabine, botoeira ou sinalização visivelmente defasadas em relação ao restante do prédio.",
       "O sétimo é a falta de histórico. Quando ninguém consegue dizer o que já foi trocado, a próxima decisão vira chute. Nesses casos, uma avaliação técnica separa o que ainda se resolve com manutenção do que pede modernização.",
     ],
+    imagem: "/imagens/modernizacao2.webp",
     destaque: false,
   },
   {
@@ -447,6 +499,7 @@ export const posts: Post[] = [
       "Casa de máquinas, poço, freio, cabos e dispositivos de segurança ficam com o técnico. Abrir esses pontos sem procedimento expõe pessoas e o equipamento. O papel da administração é cobrar o registro da visita, não repetir o trabalho de campo.",
       "Quando algo sai do uso normal, o caminho é acionar o atendimento e manter as pessoas fora da cabine até a liberação. O checklist útil é curto: observar, registrar e chamar quem tem a atribuição técnica.",
     ],
+    imagem: "/imagens/checklist.webp",
     destaque: false,
   },
 ]
@@ -536,7 +589,6 @@ export const homeSections: HomeSection[] = [
     ordem: 5,
     titulo: "Tecnologia por trás de cada viagem.",
     fundo: "image",
-    imagem: "/imagens/paralax-section.webp",
     conteudo: experiencia,
     andar: "04",
     ...shell,
@@ -578,10 +630,22 @@ export const homeSections: HomeSection[] = [
     ...shell,
   },
   {
+    id: "universo",
+    anchor: "universo",
+    ativo: true,
+    ordem: 9,
+    titulo: "Por dentro da máquina.",
+    tema: "Universo da manutenção",
+    fundo: "graphite",
+    conteudo: universo,
+    andar: "04",
+    ...shell,
+  },
+  {
     id: "clientes",
     anchor: "clientes",
     ativo: true,
-    ordem: 9,
+    ordem: 10,
     titulo: "Empresas e empreendimentos que escolheram a Goldtech.",
     tema: "Confiança",
     fundo: "mist",
@@ -593,7 +657,7 @@ export const homeSections: HomeSection[] = [
     id: "projetos",
     anchor: "projetos",
     ativo: true,
-    ordem: 10,
+    ordem: 11,
     titulo: "Projetos Goldtech",
     fundo: "white",
     conteudo: projetos,
@@ -604,7 +668,7 @@ export const homeSections: HomeSection[] = [
     id: "equipe",
     anchor: "equipe",
     ativo: true,
-    ordem: 11,
+    ordem: 12,
     titulo: "Quem faz a Goldtech",
     subtitulo: "Pessoas por trás de cada movimento.",
     fundo: "mist",
@@ -616,7 +680,7 @@ export const homeSections: HomeSection[] = [
     id: "conteudos",
     anchor: "conteudo",
     ativo: true,
-    ordem: 12,
+    ordem: 13,
     titulo: "Informação para quem administra elevadores.",
     tema: "Goldtech Conteúdo",
     fundo: "white",
@@ -630,7 +694,7 @@ export const homeSections: HomeSection[] = [
     id: "cta",
     anchor: "cta",
     ativo: true,
-    ordem: 13,
+    ordem: 14,
     titulo: "Seu elevador merece uma gestão à altura.",
     subtitulo: ctaConteudo.apoio,
     fundo: "image",
@@ -645,7 +709,7 @@ export const homeSections: HomeSection[] = [
     id: "contato",
     anchor: "contato",
     ativo: true,
-    ordem: 14,
+    ordem: 15,
     titulo: "Contato",
     fundo: "white",
     conteudo: contatoConteudo,
@@ -657,7 +721,7 @@ export const homeSections: HomeSection[] = [
     id: "localizacao",
     anchor: "localizacao",
     ativo: true,
-    ordem: 15,
+    ordem: 16,
     titulo: "Localização",
     fundo: "mist",
     conteudo: unidades,

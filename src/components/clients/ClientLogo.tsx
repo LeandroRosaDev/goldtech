@@ -6,7 +6,7 @@ export function ClientLogo({ nome, imagem }: { nome: string; imagem?: string }) 
       <figcaption className="flex h-8 w-full items-end justify-center text-quiet transition duration-500 group-hover:text-ink">
         <span className="line-clamp-2 text-center text-[11px] leading-4 tracking-[0.12em] uppercase">{nome}</span>
       </figcaption>
-      <span className="relative aspect-square w-full overflow-hidden rounded-[16px] bg-white shadow-[0_12px_32px_-18px_rgba(18,20,23,0.35)] ring-1 ring-ink/5 grayscale transition duration-500 group-hover:grayscale-0">
+      <span className="relative aspect-square w-full overflow-hidden rounded-[16px] bg-white shadow-[0_12px_32px_-18px_rgba(18,20,23,0.35)] ring-1 ring-ink/5">
         {imagem ? (
           <Image
             src={imagem}

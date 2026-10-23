@@ -14,6 +14,7 @@ import { Projects } from "@/components/home/Projects"
 import { Services } from "@/components/home/Services"
 import { Team } from "@/components/home/Team"
 import { Technology } from "@/components/home/Technology"
+import { Universo } from "@/components/home/Universo"
 import { Why } from "@/components/home/Why"
 
 export const sectionRegistry: Record<SectionId, ComponentType<{ section: HomeSection }>> = {
@@ -25,6 +26,7 @@ export const sectionRegistry: Record<SectionId, ComponentType<{ section: HomeSec
   diferenciais: Why,
   tecnologia: Technology,
   modernizacao: Modernization,
+  universo: Universo,
   clientes: Clients,
   projetos: Projects,
   equipe: Team,

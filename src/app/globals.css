@@ -196,6 +196,58 @@
       visibility: hidden;
     }
   }
+
+  @keyframes tape-left {
+    from {
+      transform: rotate(-18deg);
+    }
+    to {
+      transform: translateX(-120%) rotate(-28deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes tape-right {
+    from {
+      transform: rotate(18deg);
+    }
+    to {
+      transform: translateX(120%) rotate(28deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes stamp-in {
+    from {
+      transform: scale(1.6) rotate(-8deg);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes zone-scan {
+    from {
+      transform: translateY(-120%);
+    }
+    to {
+      transform: translateY(120%);
+    }
+  }
+
+  @keyframes zone-blink {
+    0%,
+    45%,
+    100% {
+      opacity: 1;
+    }
+    50%,
+    95% {
+      opacity: 0.15;
+    }
+  }
 }
 
 @layer base {
@@ -227,6 +279,36 @@
   opacity: 0;
   transform-origin: center;
   will-change: transform, opacity;
+}
+
+.tape-break-left {
+  animation: tape-left 0.7s ease-in forwards;
+}
+
+.tape-break-right {
+  animation: tape-right 0.7s ease-in forwards;
+}
+
+.stamp-in {
+  animation: stamp-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.zone-scan {
+  animation: zone-scan 2.8s linear infinite;
+}
+
+.zone-blink {
+  animation: zone-blink 1.1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tape-break-left,
+  .tape-break-right,
+  .stamp-in,
+  .zone-scan,
+  .zone-blink {
+    animation: none;
+  }
 }
 
 @media (min-width: 768px) {
