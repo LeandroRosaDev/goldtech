@@ -17,17 +17,19 @@ export function Team({ section }: { section: HomeSection }) {
               {section.subtitulo}
             </p>
           ) : null}
-          <figure className="relative mt-10">
-            <MediaPanel
-              src={data.imagemColetiva}
-              alt="Equipe Goldtech"
-              label="Equipe em campo"
-              dimensao="1774 × 887 px"
-              imageClassName="object-center"
-              className="aspect-[2/1] w-full"
-            />
-            {data.legendaColetiva ? <Caption>{data.legendaColetiva}</Caption> : null}
-          </figure>
+          {data.imagemColetiva ? (
+            <figure className="relative mt-10">
+              <MediaPanel
+                src={data.imagemColetiva}
+                alt="Equipe Goldtech"
+                label="Equipe em campo"
+                dimensao="1774 × 887 px"
+                imageClassName="object-center"
+                className="aspect-[2/1] w-full"
+              />
+              {data.legendaColetiva ? <Caption>{data.legendaColetiva}</Caption> : null}
+            </figure>
+          ) : null}
           <ul className="mt-10 grid gap-10 min-[768px]:grid-cols-3">
             {data.pessoas.map((pessoa) => (
               <li key={pessoa.nome}>

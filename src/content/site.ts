@@ -61,6 +61,7 @@ export const menu: NavLink[] = [
 export const footerNav = {
   empresa: [
     { label: "Sobre", href: "/sobre" },
+    { label: "Equipe", href: "/#equipe" },
     { label: "Clientes", href: "/clientes" },
   ],
   solucoes: [
@@ -436,7 +437,6 @@ export const projetos: Projeto[] = [
 ]
 
 export const equipe: EquipeConteudo = {
-  imagemColetiva: "/imagens/equipe.webp",
   pessoas: [
     { nome: "Felipe Pimentel", cargo: "Sócio e Dono", imagem: "/imagens/felipe.webp" },
     { nome: "Fábio Silveira", cargo: "Sócio e Dono", imagem: "/imagens/fabio.webp" },
@@ -666,7 +666,7 @@ export const homeSections: HomeSection[] = [
   {
     id: "equipe",
     anchor: "equipe",
-    ativo: false,
+    ativo: true,
     ordem: 12,
     titulo: "Quem faz a Goldtech",
     subtitulo: "Pessoas por trás de cada movimento.",
