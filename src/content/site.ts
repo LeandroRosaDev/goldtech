@@ -26,8 +26,8 @@ import type {
 export const siteConfig: SiteConfig = {
   nome: "Goldtech",
   frase: "Elevando conforto e eficiência",
-  telefone: "(21) 99201-6050",
-  telefoneHref: "tel:+5521992016050",
+  telefone: "(21) 99232-8170",
+  telefoneHref: "tel:+5521992328170",
   whatsapp: "(21) 99201-6050",
   whatsappHref: "https://wa.me/5521992016050",
   email: "comercial@goldtechelevadores.com",
@@ -36,7 +36,7 @@ export const siteConfig: SiteConfig = {
     { rotulo: "Administrativo", email: "administrativo@goldtechelevadores.com" },
   ],
   contatos: [
-    { rotulo: "Comercial", telefone: "(21) 99201-6050", href: "tel:+5521992016050" },
+    { rotulo: "Comercial", telefone: "(21) 99232-8170", href: "tel:+5521992328170" },
   ],
   horario: "Segunda a sexta, das 8h às 18h",
   endereco: "Rua do Bonfim, 428 - Vasco da Gama, Rio de Janeiro - RJ",
