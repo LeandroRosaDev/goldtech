@@ -61,7 +61,6 @@ export const menu: NavLink[] = [
 export const footerNav = {
   empresa: [
     { label: "Sobre", href: "/sobre" },
-    { label: "Equipe", href: "/#equipe" },
     { label: "Clientes", href: "/clientes" },
   ],
   solucoes: [
@@ -117,7 +116,7 @@ export const institucional: Institucional = {
     "A Goldtech tem mais de 25 anos de atuação em condomínios, empresas e residências em todo o Estado do Rio de Janeiro. Com a mudança do quadro societário, os novos donos Felipe e Fábio reformularam completamente a empresa, tornando-a mais eficiente e confiável. A operação segue em instalação, manutenção preventiva e corretiva, modernização e acessibilidade, com atendimento direto e foco na causa de cada problema.",
   historia: [
     "A Goldtech nasceu do trabalho de campo, há mais de 25 anos: técnicos que conhecem poço, máquina, comando e a rotina de quem administra o prédio.",
-    "A mudança do quadro societário colocou Felipe Pimental e Fábio Silveira à frente da empresa. A reformulação alcançou processo, registro e atendimento.",
+    "A mudança do quadro societário colocou Felipe Pimentel e Fábio Silveira à frente da empresa. A reformulação alcançou processo, registro e atendimento.",
     "Hoje a equipe une procedimento, histórico técnico e presença nas unidades atendidas, com uma operação mais eficiente e confiável.",
   ],
   linkTexto: "Conheça nossa história",
@@ -439,7 +438,7 @@ export const projetos: Projeto[] = [
 export const equipe: EquipeConteudo = {
   imagemColetiva: "/imagens/equipe.webp",
   pessoas: [
-    { nome: "Felipe Pimental", cargo: "Sócio e Dono", imagem: "/imagens/felipe.webp" },
+    { nome: "Felipe Pimentel", cargo: "Sócio e Dono", imagem: "/imagens/felipe.webp" },
     { nome: "Fábio Silveira", cargo: "Sócio e Dono", imagem: "/imagens/fabio.webp" },
     { nome: "Milena Filgueira", cargo: "Supervisora Administrativa", imagem: "/imagens/milena.webp" },
   ],
@@ -667,7 +666,7 @@ export const homeSections: HomeSection[] = [
   {
     id: "equipe",
     anchor: "equipe",
-    ativo: true,
+    ativo: false,
     ordem: 12,
     titulo: "Quem faz a Goldtech",
     subtitulo: "Pessoas por trás de cada movimento.",
